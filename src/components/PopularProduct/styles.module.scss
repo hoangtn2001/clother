@@ -1,0 +1,8 @@
+@use "@styles/variables.module.scss" as*;
+@use "@styles/mixin.module.scss" as*;
+.container{
+    @include flex_box_custom(flex-start, center, 16px);
+
+    margin-top: 10px;
+    flex-wrap: wrap;
+}

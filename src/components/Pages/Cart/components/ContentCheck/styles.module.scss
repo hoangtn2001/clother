@@ -1,0 +1,56 @@
+@use "@styles/variables.module.scss" as*;
+@use "@styles/mixin.module.scss" as*;
+.containerContent{
+    padding-top: 60px;
+    @include flex_box_custom(space-between, flex-start,30px);
+    .contentRight{
+    border: 2px solid black;
+    width: 429px;
+    height: auto;
+    max-height: 600px;
+    padding: 20px;
+    @include flex_box_custom(flex-start, flex-start,0);
+    flex-direction: column;
+   
+    .boxContent {
+        height: 90%;
+        overflow-y: scroll;
+        width: auto;
+    }
+    .boxContent::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+    .boxBtn{
+        @include flex_box_custom(center, center, 10px);
+        flex-direction: column;
+    }
+    .subTotal{
+        @include flex_box_custom(space-between, center,0);
+        width: 100%;
+        margin: 10px 0;
+        font-size: 16px;
+        color: #9a9a9a;
+    }
+    .subTotal1{
+        font-size: 20px;
+        color: $primary_color;
+    }
+    .but2{
+        width: 100%;
+        padding: 12px 0;
+    }
+   
+}
+.contentLeft{
+    flex:1;
+    .fullName{
+        @include flex_box_custom(space-between, center, 0)
+    }
+}
+}
+ .line{
+        width: 100%;
+        height: 1px;
+        background-color: #666666;
+        margin: 20px 0;
+    }

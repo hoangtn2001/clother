@@ -1,0 +1,131 @@
+@use "@styles/mixin.module" as *;
+@use "@styles/variables.module" as *;
+
+.container {
+    @include flex_box_custom(center,center,0px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.fixed {
+    background-color: rgba(242, 242, 242, 0.9);
+    position: fixed;
+    @include flex_box_custom(center,center,0px);
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 1s ease;
+    animation: slideDown 0.9s ease;
+    z-index: 1000;
+}
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 83px;
+    width: 1250px;
+}
+
+.containerBoxIcon{
+    @include flex_box_custom(center,center,10px);
+    cursor: pointer;
+}
+.containerMenu{
+    @include flex_box_custom(center,center,40px);
+}
+.menu{
+    position: relative;
+    cursor: pointer;
+    padding-top: 4px;
+    font-size: 15px;
+    color: #333333;
+}
+.menuContainer{
+    display: flex;
+    flex-direction: column;
+}
+.logout{
+    margin-top: 20px;
+    margin-bottom: -40px;
+    font-weight: bold;
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+.menu::after{
+    content: "";
+    height: 2.5px;
+    width: 0;
+    background-color: $primary_color;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    margin-top: 5px;
+}
+.menu::before{
+     content: "";
+    height: 38px;
+    width: 80px;
+    position: absolute;
+    right: 0;
+    bottom: -25px;
+}
+.menu:hover::after{
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    right: 0;
+}
+.menuContainer:hover  .logout{
+    display: block;
+    opacity: 1;
+     transition: all 1s;
+     pointer-events: auto;
+
+}
+.logout:hover{
+    color: #838383;
+    pointer-events: auto;
+    transition: all 0.5s;
+}
+.containerBox{
+    @include flex_box_custom(center,center,20px)
+}
+.boxIcon {
+    width: 26px;
+    height: 26px;
+    @include radius_common(50%);
+    @include flex_box_custom(center,center, 0px);
+    background-color: $primary_color;
+}
+.boxIcon1 {
+    width: 26px;
+    height: 26px;
+    @include radius_common(50%);
+    @include flex_box_custom(center,center, 0px);
+}
+.logo{
+    width: 153px;
+    height: 53px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

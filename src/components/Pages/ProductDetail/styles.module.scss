@@ -1,0 +1,167 @@
+@use "@styles/variables.module.scss" as*;
+@use "@styles/mixin.module.scss" as*;
+.container{
+    padding-top: 83px;
+    .functionBox{
+    @include flex_box_custom(space-between,center, 0px);
+    color: $seconddary_color;
+    font-size: 14px;
+    font-weight: 300;
+    .specialText{
+        color: $primary_color;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .btnBack{
+        cursor: pointer;
+    }
+   }
+   .containerPro{
+    @include flex_box_custom(space-between,flex-start,0);
+    padding-top: 20px;
+    .preImg{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 630px;
+        width: 100%;
+        img{
+            width: calc(100% / 2 - 10px);
+            height: auto;
+            border-radius: 3px;
+            cursor: zoom-in;
+            object-fit: cover;
+        }
+        .mirror{
+             position: fixed;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  display: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+        }
+
+    }
+    .inforPro{
+        padding-left: 20px;
+        .size{
+    @include flex_box_custom( flex-start, flex-start, 20px);
+    flex-direction: column;
+    width: 100%;
+    .sizeChoose{
+        @include flex_box_custom(flex-start, center, 10px)
+    }
+    .sizeItem{
+        @include flex_box_custom(center,center,0);
+        border: 1px solid #9a9a9a;
+        width: 30px;
+        height: 30px;
+        padding: 1px;
+        cursor: pointer;
+    }
+    .sizeItemChoose{
+        border: 2px solid black;
+    }
+    .button{
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    .select{
+        height: 40px;
+        width: 80px;
+        text-indent: 10px;
+        color: #9a9a9a;
+        border: 1px solid #9a9a9a;
+    }
+    .button1{
+        height: 40px;
+        width: 100%;
+    }
+}
+
+}
+    .additional{
+    padding-top: 45px;
+    border-bottom: 3px solid #f7f7f7;
+    cursor: pointer;
+    .addHeader{
+        width: 100%;
+        height: 45px;
+        background-color: #f7f7f7;
+        font-size: 16px;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .addNoneHead{
+         width: 100%;
+        height: 45px;
+        color: #555;
+        font-size: 16px;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .addNone{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .inforItem{
+            width: 95%;
+            border-bottom: 2px solid #f7f7f7;
+            padding: 15px 0 15px 0;
+            display: flex;
+            gap: 40px;
+            .inforItem1{
+                width: 100px;
+                color: #888;
+            }
+        }
+        .inforItem:nth-last-child(1){
+            border: none;
+        }
+    
+     opacity: 0;
+     overflow: hidden;
+    height: 0;
+    transition:  300ms;
+    }
+    .addBody{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0 10px 0;
+        transition:  300ms;
+        .inforItem{
+            width: 95%;
+            border-bottom: 2px solid #f7f7f7;
+            padding: 15px 0 15px 0;
+            display: flex;
+            gap: 40px;
+            .inforItem1{
+                width: 100px;
+                color: #888;
+            }
+        }
+        .inforItem:nth-last-child(1){
+            border: none;
+        }
+    }
+}
+    }
+   }
+}
+

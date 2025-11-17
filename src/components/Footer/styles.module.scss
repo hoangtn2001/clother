@@ -1,0 +1,37 @@
+@use "@styles/mixin.module" as *;
+@use "@styles/variables.module" as *;
+.container{
+   @include flex_box_custom(center,center, 0px);
+    background-color: $thr_color;
+    margin-top: 80px;
+    color: $white_color;
+    padding: 40px 0 ;
+    flex-direction: column;
+    .contents{
+        color: $white_color;
+        padding: 10px 0;
+    }
+}
+.logo{
+    width: 153px;
+    height: 53px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.linkItems{
+    @include flex_box_custom(center,center, 30px);
+    margin-top: 25px;
+    padding-bottom: 30px;
+}
+.linkItem{
+    text-decoration: none;
+    color: $white_color;
+    &:hover{
+        cursor: pointer;
+        color: #a6a6a6;
+        transition: color 0.3s;
+    }
+}

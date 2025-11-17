@@ -1,0 +1,32 @@
+@use "@styles/variables.module.scss" as*;
+@use "@styles/mixin.module.scss" as*;
+
+.container {
+    @include flex_box_custom(center, center, 20px);
+    flex-direction: column;
+}
+.titl{
+    position: relative;
+    font-size: 18px;
+
+    &::after{
+        content: "";
+    height: 2.5px;
+    width: 0;
+    background-color: $primary_color;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: -6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    margin-top: 5px;
+    }
+    &:hover::after{
+         visibility: visible;
+    opacity: 1;
+    width: 100%;
+    right: 0; 
+    }
+}

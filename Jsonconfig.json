@@ -1,0 +1,11 @@
+{
+    "ComplierOptions" : {
+        "baseUrl": "./",
+        "path": {
+            "@components/*":["src/components/*"],
+            "@assets/*":["src/assets?*"],
+            "@pages/*":["src/components/Pages/*"]
+        }
+    },
+    "include":["src/**/*"]
+}
